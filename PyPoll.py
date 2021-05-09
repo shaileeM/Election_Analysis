@@ -16,6 +16,9 @@ file_to_load = os.path.join("Resources", "election_results.csv")  #OS specific u
 total_Votes = 0
 candidates_options =[]
 candidate_votes ={}
+winning_count =0
+winning_candidate=""
+winning_percentage = 0
 file_to_save = os.path.join("analysis","election_analysis.txt")
 
 with open(file_to_load) as election_data:
@@ -28,19 +31,25 @@ with open(file_to_load) as election_data:
         if candidates_name not in candidates_options:
             candidates_options.append(row[2]) #add unique candidates
             candidate_votes[candidates_name] =0  #add candidate name as dictionary key
-        candidate_votes[candidates_name] +=1
+        candidate_votes[candidates_name] +=1  # add votes for each candidate as a value in the dictionary 
     
     # % of votes for each candidate 
     for candidate_name in candidate_votes:
-        votes = candidate_votes[candidate_name]
-        votes_percentage = float(votes)/float(total_Votes) *100
-        print(f"{candidate_name:} recieved {votes_percentage} % of the total vote \n" )
+        votes = candidate_votes[candidate_name]  #get value from dictionary 
+        votes_percentage = float(votes)/float(total_Votes) *100 #calculate percentage of votes for each candidate 
+        print(f"{candidate_name:} {votes_percentage} % ({votes:,})\n" )
 
-        
-    #print(total_Votes)
-    #print(candidate_votes)
-   
-    
+
+
+
+        #find out the winning candidate and winning vote %
+        if (votes > winning_count) and (votes_percentage>winning_percentage):
+            winning_count = votes
+            winning_percentage = votes_percentage
+            winning_candidate = candidate_name
+
+    print(f"Winning candidate is {winning_candidate} with winning count {winning_count:,} and winning percentage {winning_percentage:.1f} ")
+  
    
 with open(file_to_save, 'w') as election_analysis:
     election_analysis.write("Counties in the Election")
