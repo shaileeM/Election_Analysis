@@ -13,10 +13,18 @@ import os
 #file_to_save = r'c:\Users\shail\Election_Analysis\analysis\election_analysis.txt'
 
 file_to_load = os.path.join("Resources", "election_results.csv")  #OS specific utilities
+total_Votes = 0
 file_to_save = os.path.join("analysis","election_analysis.txt")
 
 with open(file_to_load) as election_data:
-    print (election_data)
+    file_reader = csv.reader(election_data)
+    headers = next(file_reader)
+
+    for row in file_reader:
+        total_Votes = total_Votes+1
+    print(total_Votes)
+   
+    
    
 with open(file_to_save, 'w') as election_analysis:
     election_analysis.write("Counties in the Election")
