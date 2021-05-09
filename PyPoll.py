@@ -14,6 +14,8 @@ import os
 
 file_to_load = os.path.join("Resources", "election_results.csv")  #OS specific utilities
 total_Votes = 0
+candidates_options =[]
+candidate_votes ={}
 file_to_save = os.path.join("analysis","election_analysis.txt")
 
 with open(file_to_load) as election_data:
@@ -22,7 +24,21 @@ with open(file_to_load) as election_data:
 
     for row in file_reader:
         total_Votes = total_Votes+1
-    print(total_Votes)
+        candidates_name = row[2]
+        if candidates_name not in candidates_options:
+            candidates_options.append(row[2]) #add unique candidates
+            candidate_votes[candidates_name] =0  #add candidate name as dictionary key
+        candidate_votes[candidates_name] +=1
+    
+    # % of votes for each candidate 
+    for candidate_name in candidate_votes:
+        votes = candidate_votes[candidate_name]
+        votes_percentage = float(votes)/float(total_Votes) *100
+        print(f"{candidate_name:} recieved {votes_percentage} % of the total vote \n" )
+
+        
+    #print(total_Votes)
+    #print(candidate_votes)
    
     
    
