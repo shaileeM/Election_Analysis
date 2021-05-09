@@ -16,6 +16,7 @@ file_to_load = os.path.join("Resources", "election_results.csv")  #OS specific u
 total_Votes = 0
 candidates_options =[]
 candidate_votes ={}
+
 winning_count =0
 winning_candidate=""
 winning_percentage = 0
