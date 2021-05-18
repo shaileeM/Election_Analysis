@@ -110,13 +110,10 @@ with open(file_to_save, "w") as txt_file:
          # 6d: Print the county results to the terminal.
         county_vote_details =(f"{county_Dict}: {perc_votes_county:.1f}% ({vote_count_county:,})\n")
         print(county_vote_details)
+        # 6e: Save the county votes to a text file.
+        txt_file.write(county_vote_details)
          
        
-         
-
-        # 6e: Save the county votes to a text file.
-        
-
         # 6f: Write an if statement to determine the winning county and get its vote count.
         if vote_count_county >= winning_county_counts:
             winning_county_counts = vote_count_county
@@ -131,6 +128,9 @@ with open(file_to_save, "w") as txt_file:
 
 
     # 8: Save the county with the largest turnout to a text file.
+    txt_file.write(f"........................................\n")
+    txt_file.write(f"Largest County Turnout:{winning_county}\n")
+    txt_file.write(f"........................................\n")
 
 
     # Save the final candidate vote count to the text file.
