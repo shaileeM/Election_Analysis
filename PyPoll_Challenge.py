@@ -30,6 +30,8 @@ winning_count = 0
 winning_percentage = 0
 
 # 2: Track the largest county and county voter turnout.
+winning_county = ""
+winning_county_counts =0
 
 
 
@@ -106,22 +108,26 @@ with open(file_to_save, "w") as txt_file:
         perc_votes_county = vote_count_county/total_votes * 100
 
          # 6d: Print the county results to the terminal.
-        county_vote_details =(
-            f"County Name : {county_Dict}\n"
-            f"Total Vote % : {perc_votes_county}\n"
-            f"Total Vote: {vote_count_county}\n"
-            f"-------------------------\n\n"
-             
-        )
-        print(county_vote_details, end="")
+        county_vote_details =(f"{county_Dict}: {perc_votes_county:.1f}% ({vote_count_county:,})\n")
+        print(county_vote_details)
+         
+       
          
 
-         # 6e: Save the county votes to a text file.
+        # 6e: Save the county votes to a text file.
+        
 
-         # 6f: Write an if statement to determine the winning county and get its vote count.
+        # 6f: Write an if statement to determine the winning county and get its vote count.
+        if vote_count_county >= winning_county_counts:
+            winning_county_counts = vote_count_county
+            winning_county = county_Dict
+        
 
 
     # 7: Print the county with the largest turnout to the terminal.
+    print(f"-----------------------------------------")
+    print(f"Largest County Turnout : {winning_county}")
+    print(f"-----------------------------------------")
 
 
     # 8: Save the county with the largest turnout to a text file.
