@@ -16,9 +16,9 @@ The purpose of this election audit analysis is :
   for each county in the precinct.
   1. More than 80% of the votes were casted for Denver county followed by Jefferson and Arapahoe.
      
-	 Denver : 82.8% : 306,055
-	 Jefferson : 10.5% : 38,855
-	 Arapahoe : 6.7% : 24,801
+	 - Denver : 82.8% : 306,055
+	 - Jefferson : 10.5% : 38,855
+	 - Arapahoe : 6.7% : 24,801
 	 
 - Which county had the largest number of votes?
   Denver has the largest number of votes(306,055)
