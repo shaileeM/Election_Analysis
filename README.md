@@ -40,5 +40,15 @@ The purpose of this election audit analysis is :
   
 
 ## Summary
+
+1. Business Proposal :
+   - Currently we are appending values inside 2 dictionaries, *candidate_votes* and *county_votes and we have written
+     2 if loops. As the number of rows are same for all the 3 columns in the data, we can only write 1 if condition 
+	 to check both county_name and candidate_name. This way if more columns are added in our data, we can iterate through 
+	 all the data and populate dictionaries at once. 
+   - Currently we only have 3 counties and 3 candidates so it is easy to view the results in text file without formatting.
+     We can edit the script in such a way that it creates a table inside the text file to show votes for all the county and
+	 candidates in tabular form.
+	 
   
 	 
