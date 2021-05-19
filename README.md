@@ -52,5 +52,6 @@ The purpose of this election audit analysis is :
      We can edit the script in such a way that it creates a table inside the text file to show votes for all the county and
 	 candidates in tabular form.
 	 
+	 
   
 	 
