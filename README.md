@@ -36,8 +36,10 @@ The purpose of this election audit analysis is :
   their percentage of the total votes?
   Diana DeGette won the election with 272,892 vote count which is 73.8% if the total votes 
   
+- Election Results printed to the command line: 
 ![](./Resources/ElectionResults.PNG)
   
+- Election Results printed in the text file is under Analysis folder. 
 
 ## Summary
 
