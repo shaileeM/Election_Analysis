@@ -12,6 +12,7 @@ The purpose of this election audit analysis is :
 ### Election Audit Results
 - How many votes were cast in this congressional election?
   369,711 were casted in the congressional election.
+  
 - Provide a breakdown of the number of votes and the percentage of total votes 
   for each county in the precinct.
   1. More than 80% of the votes were casted for Denver county followed by Jefferson and Arapahoe.
@@ -25,11 +26,15 @@ The purpose of this election audit analysis is :
   
 - Provide a breakdown of the number of votes and the percentage of the
   total votes each candidate received.
-  1. 
+  1. Diana DeGette recieved almost 70% of the total votes followed by Charles and Raymon
+  
+     - Charles Casper Stockham: 23.0% (85,213)
+     - Diana DeGette: 73.8% (272,892)
+	 - Raymon Anthony Doane: 3.1% (11,606)
   
 - Which candidate won the election, what was their vote count, and what was 
   their percentage of the total votes?
-  
+  Diana DeGette won the election with 272,892 vote count which is 73.8% if the total votes 
   
 ![](./Resources/ElectionResults.PNG)
   
